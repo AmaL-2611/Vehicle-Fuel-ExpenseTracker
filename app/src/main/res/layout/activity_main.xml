@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="#F5F7FA">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Vehicle Fuel Expense Tracker"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="#1565C0"
+            android:gravity="center"
+            android:padding="12dp" />
+
+        <TextView
+            android:id="@+id/tvTotalExpenses"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Total Expenses: ₹0.00"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#212121"
+            android:padding="8dp" />
+
+        <TextView
+            android:id="@+id/tvTotalLitres"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Total Fuel: 0.00 litres"
+            android:textSize="16sp"
+            android:padding="8dp" />
+
+        <TextView
+            android:id="@+id/tvRefillCount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Total Refills: 0"
+            android:textSize="16sp"
+            android:padding="8dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Add Fuel Record"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#1565C0"
+            android:paddingTop="16dp"
+            android:paddingBottom="8dp" />
+
+        <EditText
+            android:id="@+id/etVehicleName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Vehicle Name"
+            android:inputType="textCapWords"
+            android:padding="12dp" />
+
+        <Spinner
+            android:id="@+id/spFuelType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp" />
+
+        <EditText
+            android:id="@+id/etQuantity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Quantity in litres"
+            android:inputType="numberDecimal"
+            android:padding="12dp" />
+
+        <EditText
+            android:id="@+id/etPrice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Price per litre (₹)"
+            android:inputType="numberDecimal"
+            android:padding="12dp" />
+
+        <TextView
+            android:id="@+id/tvCalculatedCost"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Total Cost: ₹0.00"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#2E7D32"
+            android:padding="12dp" />
+
+        <Button
+            android:id="@+id/btnSave"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Save Fuel Record" />
+
+        <Button
+            android:id="@+id/btnClear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Clear Form" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Fuel History"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#1565C0"
+            android:paddingTop="16dp"
+            android:paddingBottom="8dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tap a record to edit it. Long-press to delete it."
+            android:textSize="13sp"
+            android:textColor="#616161"
+            android:paddingBottom="8dp" />
+
+        <ListView
+            android:id="@+id/listFuelRecords"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:background="#FFFFFF"
+            android:divider="#BDBDBD"
+            android:dividerHeight="1dp"
+            android:nestedScrollingEnabled="false" />
+
+    </LinearLayout>
+</ScrollView>
